@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ArticleActivity">
 
-    <TextView
-        android:id="@+id/txtv_title"
-        style="@style/ArticleTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/txtv_src"
-        style="@style/ArticleAttribute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/txtv_author_publishedat"
-        style="@style/ArticleAttribute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <View style="@style/HorizontalDivider" />
-
-    <TextView
-        android:id="@+id/txtv_description"
-        style="@style/ArticleDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <ImageView
-        android:id="@+id/imgv_thumbnail"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitStart"
-        android:contentDescription="@string/article_thumbnail"
-        app:srcCompat="@drawable/test" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtv_url"
-        style="@style/ArticleAttribute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtv_title"
+            style="@style/ArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <View
-        style="@style/HorizontalDivider"
-        android:layout_height="3dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
+        <TextView
+            android:id="@+id/txtv_src"
+            style="@style/ArticleAttribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/txtv_content"
-        style="@style/ArticleContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtv_author_publishedat"
+            style="@style/ArticleAttribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <View style="@style/HorizontalDivider" />
+
+        <TextView
+            android:id="@+id/txtv_description"
+            style="@style/ArticleDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgv_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/article_thumbnail"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/test" />
+
+        <TextView
+            android:id="@+id/txtv_url"
+            style="@style/ArticleUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_height="3dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:id="@+id/txtv_content"
+            style="@style/ArticleContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</ScrollView>

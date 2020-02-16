@@ -3,5 +3,5 @@
     <string name="article_thumbnail">Thumbnail</string>
     <string name="article_src"><![CDATA[<b><font color="#bd3d3d">Source:</font></b> %s]]></string>
     <string name="article_author_publishedat"><![CDATA[<b><font color="#bd3d3d">%s</font></b> - %s]]></string>
-    <string name="article_url"><![CDATA[<b><font color="#bd3d3d">Full article at:</font></b> %s]]></string>
+    <string name="article_url"><![CDATA[<b><font color="#bd3d3d">Full article at:</font></b> <u>%s</u>]]></string>
 </resources>

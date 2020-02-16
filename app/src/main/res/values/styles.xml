@@ -1,7 +1,7 @@
 <resources>
 
     <style name="Spacing">
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">8dp</item>
     </style>
 
     <style name="ArticleTitle" parent="Spacing">
@@ -12,6 +12,10 @@
 
     <style name="ArticleAttribute" parent="Spacing">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+    </style>
+
+    <style name="ArticleUrl" parent="ArticleAttribute">
+        <item name="android:textColor">@color/blue</item>
     </style>
 
     <style name="ArticleDescription" parent="Spacing">
