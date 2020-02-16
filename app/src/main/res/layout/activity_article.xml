@@ -9,21 +9,27 @@
 
     <TextView
         android:id="@+id/txtv_title"
+        style="@style/ArticleTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/txtv_src"
+        style="@style/ArticleAttribute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/txtv_author_publishedat"
+        style="@style/ArticleAttribute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <View style="@style/HorizontalDivider" />
+
     <TextView
         android:id="@+id/txtv_description"
+        style="@style/ArticleDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -38,11 +44,19 @@
 
     <TextView
         android:id="@+id/txtv_url"
+        style="@style/ArticleAttribute"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <View
+        style="@style/HorizontalDivider"
+        android:layout_height="3dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
     <TextView
         android:id="@+id/txtv_content"
+        style="@style/ArticleContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
