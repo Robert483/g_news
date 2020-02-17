@@ -79,7 +79,6 @@ public class Article {
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
     }
-    //TODO format?
     @SerializedName("publishedAt")
     @Expose
     private Date publishedAt;
