@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="article_thumbnail">Thumbnail</string>
+    <string name="search_result_url">https://newsapi.org/v2/everything?q=%s&amp;from=%s&amp;sortBy=publishedAt&amp;apiKey=1cb184fe3b2d4d75abd83c81491d4839</string>
 </resources>
