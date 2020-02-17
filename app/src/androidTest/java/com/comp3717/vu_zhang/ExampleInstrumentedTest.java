@@ -1,4 +1,4 @@
-package com.nuntium.g_news;
+package com.comp3717.vu_zhang;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.nuntium.g_news", appContext.getPackageName());
+        assertEquals("com.comp3717.vu_zhang", appContext.getPackageName());
     }
 }

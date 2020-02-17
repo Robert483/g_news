@@ -1,11 +1,11 @@
-package com.nuntium.g_news.model;
-
-import androidx.annotation.NonNull;
-
-import java.util.Date;
+package com.comp3717.vu_zhang.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.Date;
+
+import androidx.annotation.NonNull;
 
 public class Article {
     @SerializedName("title")

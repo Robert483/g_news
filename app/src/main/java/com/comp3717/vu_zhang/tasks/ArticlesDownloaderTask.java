@@ -1,4 +1,4 @@
-package com.nuntium.g_news.tasks;
+package com.comp3717.vu_zhang.tasks;
 
 import android.app.Activity;
 import android.app.ListActivity;
@@ -7,11 +7,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.comp3717.vu_zhang.SearchResultActivity;
+import com.comp3717.vu_zhang.handlers.HttpHandler;
+import com.comp3717.vu_zhang.model.Article;
+import com.comp3717.vu_zhang.model.NewsAPIResponse;
 import com.google.gson.Gson;
-import com.nuntium.g_news.SearchResultActivity;
-import com.nuntium.g_news.model.Article;
-import com.nuntium.g_news.handlers.HttpHandler;
-import com.nuntium.g_news.model.NewsAPIResponse;
 
 import java.lang.ref.WeakReference;
 

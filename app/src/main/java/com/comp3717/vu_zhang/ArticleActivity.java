@@ -1,20 +1,20 @@
-package com.nuntium.g_news;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.comp3717.vu_zhang;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
-import android.widget.ImageView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nuntium.g_news.model.Article;
-
-import com.nuntium.g_news.tasks.ImageDownloaderTask;
+import com.comp3717.vu_zhang.model.Article;
+import com.comp3717.vu_zhang.tasks.ImageDownloaderTask;
 
 import java.util.Date;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ArticleActivity extends AppCompatActivity {
     private String url;
@@ -39,14 +39,30 @@ public class ArticleActivity extends AppCompatActivity {
 
         TextView textView = findViewById(R.id.txtv_title);
         textView.setText(title);
-        textView = findViewById(R.id.txtv_src);
-        textView.setText(Html.fromHtml(source, Html.FROM_HTML_MODE_COMPACT));
-        textView = findViewById(R.id.txtv_author_publishedat);
-        textView.setText(Html.fromHtml(authorAndTime, Html.FROM_HTML_MODE_COMPACT));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            textView = findViewById(R.id.txtv_src);
+            textView.setText(Html.fromHtml(source, Html.FROM_HTML_MODE_COMPACT));
+
+            textView = findViewById(R.id.txtv_author_publishedat);
+            textView.setText(Html.fromHtml(authorAndTime, Html.FROM_HTML_MODE_COMPACT));
+
+            textView = findViewById(R.id.txtv_url);
+            textView.setText(Html.fromHtml(url, Html.FROM_HTML_MODE_COMPACT));
+        } else {
+            textView = findViewById(R.id.txtv_src);
+            textView.setText(Html.fromHtml(source));
+
+            textView = findViewById(R.id.txtv_author_publishedat);
+            textView.setText(Html.fromHtml(authorAndTime));
+
+            textView = findViewById(R.id.txtv_url);
+            textView.setText(Html.fromHtml(url));
+        }
+
         textView = findViewById(R.id.txtv_description);
         textView.setText(description);
-        textView = findViewById(R.id.txtv_url);
-        textView.setText(Html.fromHtml(url, Html.FROM_HTML_MODE_COMPACT));
+
         textView = findViewById(R.id.txtv_content);
         textView.setText(content);
 

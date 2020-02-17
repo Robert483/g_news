@@ -1,4 +1,4 @@
-package com.nuntium.g_news.model;
+package com.comp3717.vu_zhang.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

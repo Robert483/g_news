@@ -1,4 +1,4 @@
-package com.nuntium.g_news;
+package com.comp3717.vu_zhang;
 
 import org.junit.Test;
 

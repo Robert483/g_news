@@ -1,6 +1,4 @@
-package com.nuntium.g_news;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.comp3717.vu_zhang;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +6,8 @@ import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.nuntium.g_news;
+package com.comp3717.vu_zhang;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
-import com.nuntium.g_news.model.Article;
-import com.nuntium.g_news.tasks.ArticlesDownloaderTask;
+import com.comp3717.vu_zhang.model.Article;
+import com.comp3717.vu_zhang.tasks.ArticlesDownloaderTask;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class SearchResultActivity extends ListActivity {
         int DAY_IN_MS = 1000 * 60 * 60 * 24;
         String date_text = date_pattern.format(new Date((new Date()).getTime() - (7 * DAY_IN_MS)));
 
-        String service_url = getString(R.string.search_result_url, query, date_text);
+        String service_url = getString(R.string.searchresult_url, query, date_text);
         new ArticlesDownloaderTask(this, service_url).execute();
     }
 

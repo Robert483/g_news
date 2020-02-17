@@ -1,4 +1,4 @@
-package com.nuntium.g_news.model;
+package com.comp3717.vu_zhang.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class NewsAPIResponse {
-
     @SerializedName("status")
     @Expose
     private String status = null;
@@ -17,7 +16,7 @@ public class NewsAPIResponse {
 
     @SerializedName("articles")
     @Expose
-    private List<Article> articles;
+    private List<Article> articles = null;
 
     public List<Article> getArticles() {
         return articles;

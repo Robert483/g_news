@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Vu_Zhang</string>
     <string name="article_thumbnail">Thumbnail</string>
-    <string name="search_result_url">https://newsapi.org/v2/everything?q=%s&amp;from=%s&amp;sortBy=publishedAt&amp;apiKey=1cb184fe3b2d4d75abd83c81491d4839</string>
+    <string name="searchresult_url">https://newsapi.org/v2/everything?q=%s&amp;from=%s&amp;sortBy=publishedAt&amp;apiKey=1cb184fe3b2d4d75abd83c81491d4839</string>
     <string name="article_src"><![CDATA[<b><font color="#bd3d3d">Source:</font></b> %s]]></string>
     <string name="article_author_publishedat"><![CDATA[<b><font color="#bd3d3d">%s</font></b> - %s]]></string>
     <string name="article_url"><![CDATA[<b><font color="#bd3d3d">Full article at:</font></b> <u>%s</u>]]></string>

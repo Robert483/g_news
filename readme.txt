@@ -1,6 +1,6 @@
 -----
 Name: Robert Vu
-BCIT ID: A01044795)
+BCIT ID: A01044795
 Email: robertvu483@gmail.com
 -----
 Name: Bryan Zhang

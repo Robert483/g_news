@@ -4,8 +4,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.nuntium.g_news"
-        minSdkVersion 26
+        applicationId "com.comp3717.vu_zhang"
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

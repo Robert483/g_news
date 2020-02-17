@@ -1,4 +1,4 @@
-package com.nuntium.g_news.handlers;
+package com.comp3717.vu_zhang.handlers;
 
 import android.util.Log;
 

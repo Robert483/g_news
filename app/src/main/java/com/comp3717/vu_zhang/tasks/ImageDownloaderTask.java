@@ -1,4 +1,4 @@
-package com.nuntium.g_news.tasks;
+package com.comp3717.vu_zhang.tasks;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.nuntium.g_news.R;
+import com.comp3717.vu_zhang.R;
 
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
