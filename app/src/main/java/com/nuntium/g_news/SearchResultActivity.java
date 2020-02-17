@@ -32,8 +32,7 @@ public class SearchResultActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         // format the url based on user inputs
-        //TODO main activity pass in message
-        String query = "Vancouver";
+        String query = getIntent().getStringExtra("keyword");
         SimpleDateFormat date_pattern = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         int DAY_IN_MS = 1000 * 60 * 60 * 24;
         String date_text = date_pattern.format(new Date((new Date()).getTime() - (7 * DAY_IN_MS)));

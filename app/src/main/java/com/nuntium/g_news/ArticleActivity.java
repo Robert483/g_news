@@ -15,7 +15,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
 
 public class ArticleActivity extends AppCompatActivity {
 
@@ -27,13 +26,8 @@ public class ArticleActivity extends AppCompatActivity {
         int articleIndex = getIntent().getIntExtra("index", -1);
         Article article = SearchResultActivity.articleList.get(articleIndex);
         Date date = article.getPublishedAt();
-        try {
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
-//            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
-            date = formatter.parse("2020-02-16T21:00:56Z");
-        } catch (ParseException ex) {
-            // Do nothing
-        }
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
+//        date = formatter.parse("2020-02-16T21:00:56Z");
 
         String title = article.getTitle();
         String source = getString(R.string.article_src, article.getSource().getName());
