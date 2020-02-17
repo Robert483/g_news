@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_article);
+        setContentView(R.layout.activity_main);
 
         EditText editText = findViewById(R.id.edittxt_search);
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
                     String keyword = v.getText().toString();
                     Intent intent = new Intent(MainActivity.this, SearchResultActivity.class);
                     intent.putExtra("keyword", keyword);
+                    startActivity(intent);
                 }
-
                 return false;
             }
         });
