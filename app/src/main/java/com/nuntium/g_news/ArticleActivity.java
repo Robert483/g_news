@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.nuntium.g_news.tasks.ImageDownloaderTask;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,6 +36,7 @@ public class ArticleActivity extends AppCompatActivity {
         String authorAndTime = getString(R.string.article_author_publishedat, "Trevor Smith", date);
         String description = "And the number one spot of the Cointelegraph’s first-ever Top 100 list goes to… Changpeng Zhao! Was there any doubt? Check out our exclusive interview to find out what’s behind this great workaholic";
         String url = getString(R.string.article_url,"https://bitcoinist.com/3-things-successful-bitcoin-hodler/");
+        String urlToImage = "https://static.seekingalpha.com/uploads/2020/2/10/295940-15813749909197457_origin.png";
         String content = "Bitcoin blogger Sylvain Saurel has published a thoughtful piece on essential qualities to being a True Bitcoiner. Although insightful, there are other factors that should be considered when choosing to invest in and hold the flagship cryptocurrency.\\r\\nUndersta… [+2937 chars]";
 
         TextView textView = findViewById(R.id.txtv_title);
@@ -47,5 +51,8 @@ public class ArticleActivity extends AppCompatActivity {
         textView.setText(Html.fromHtml(url, Html.FROM_HTML_MODE_COMPACT));
         textView = findViewById(R.id.txtv_content);
         textView.setText(content);
+
+        ImageView thumbnail = findViewById(R.id.imgv_thumbnail);
+        new ImageDownloaderTask(thumbnail).execute(urlToImage);
     }
 }
