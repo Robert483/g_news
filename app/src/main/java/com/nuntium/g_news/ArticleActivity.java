@@ -7,6 +7,8 @@ import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nuntium.g_news.model.Article;
+
 import com.nuntium.g_news.tasks.ImageDownloaderTask;
 
 import java.text.ParseException;
@@ -22,22 +24,24 @@ public class ArticleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
 
-        Date date = null;
+        int articleIndex = getIntent().getIntExtra("index", -1);
+        Article article = SearchResultActivity.articleList.get(articleIndex);
+        Date date = article.getPublishedAt();
         try {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault());
-            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
+//            formatter.setTimeZone(TimeZone.getTimeZone("UTC"));
             date = formatter.parse("2020-02-16T21:00:56Z");
         } catch (ParseException ex) {
             // Do nothing
         }
 
-        String title = "3 Things You Need To Be A Successful Bitcoin HODLer";
-        String source = getString(R.string.article_src, "Bitcoinist.com");
-        String authorAndTime = getString(R.string.article_author_publishedat, "Trevor Smith", date);
-        String description = "And the number one spot of the Cointelegraph’s first-ever Top 100 list goes to… Changpeng Zhao! Was there any doubt? Check out our exclusive interview to find out what’s behind this great workaholic";
-        String url = getString(R.string.article_url,"https://bitcoinist.com/3-things-successful-bitcoin-hodler/");
-        String urlToImage = "https://static.seekingalpha.com/uploads/2020/2/10/295940-15813749909197457_origin.png";
-        String content = "Bitcoin blogger Sylvain Saurel has published a thoughtful piece on essential qualities to being a True Bitcoiner. Although insightful, there are other factors that should be considered when choosing to invest in and hold the flagship cryptocurrency.\\r\\nUndersta… [+2937 chars]";
+        String title = article.getTitle();
+        String source = getString(R.string.article_src, article.getSource().getName());
+        String authorAndTime = getString(R.string.article_author_publishedat, article.getAuthor(), date);
+        String description = article.getDescription();
+        String url = getString(R.string.article_url,article.getUrl());
+        String urlToImage = article.getUrlToImage();
+        String content = article.getContent();
 
         TextView textView = findViewById(R.id.txtv_title);
         textView.setText(title);
