@@ -1,4 +1,4 @@
-package com.nuntium.g_news.model;
+package com.nuntium.g_news.handlers;
 
 import android.util.Log;
 
@@ -14,7 +14,10 @@ import java.net.URL;
 
 public class HttpHandler {
     private static final String TAG = HttpHandler.class.getSimpleName();
-    public HttpHandler() {   }
+
+    public HttpHandler() {
+    }
+
     public String makeServiceCall(String reqUrl) {
         String response = null;
         try {

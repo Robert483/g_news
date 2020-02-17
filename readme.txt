@@ -15,5 +15,5 @@ What we have not completed:
 Major challenges:
 + None
 
-Special intructions for testing our app:
-+ 
+Additional feature(s):
++ You can click on the url to open it with a browser

@@ -14,19 +14,22 @@
             android:id="@+id/txtv_title"
             style="@style/ArticleTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/txtv_src"
             style="@style/ArticleAttribute"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/txtv_author_publishedat"
             style="@style/ArticleAttribute"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <View style="@style/HorizontalDivider" />
 
@@ -34,21 +37,26 @@
             android:id="@+id/txtv_description"
             style="@style/ArticleDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
         <ImageView
             android:id="@+id/imgv_thumbnail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
             android:adjustViewBounds="true"
+            android:background="@drawable/border"
             android:contentDescription="@string/article_thumbnail"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            tools:srcCompat="@drawable/placeholder" />
 
         <TextView
             android:id="@+id/txtv_url"
             style="@style/ArticleUrl"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:onClick="onClickURL" />
 
         <View
             style="@style/HorizontalDivider"
@@ -59,7 +67,8 @@
             android:id="@+id/txtv_content"
             style="@style/ArticleContent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true" />
 
     </LinearLayout>
 
